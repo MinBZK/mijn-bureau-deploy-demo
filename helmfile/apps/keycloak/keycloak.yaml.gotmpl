@@ -23,6 +23,7 @@ extraDeploy:
         app.kubernetes.io/version: 1.0.0
         app.kubernetes.io/managed-by: Helm
       name: {{ .Release.Name }}-cli
+      namespace: {{ .Release.Namespace | quote }}
     spec:
       egress:
       - {}
