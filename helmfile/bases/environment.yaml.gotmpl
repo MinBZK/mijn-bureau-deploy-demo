@@ -3,8 +3,8 @@ environments:
   demo:
     values:
       - "helmfile/environments/demo/*.yaml.gotmpl"
-    # secrets:
-    #   - "helmfile/environments/{{ .Environment.Name }}/*.secrets.yaml"
+    secrets:
+      - "helmfile/environments/{{ .Environment.Name }}/*.secrets.yaml"
   production:
     values:
       - "helmfile/environments/production/*.yaml.gotmpl"
